@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 70%;
+            height: 80vh;
+            margin: auto;
+            border: 3px solid black;
+            margin-top: 50px;
+        }
+          span{
+          margin-left: 300px;
+          }
+        span input{
+          
+            padding: 10px;
+            margin-top: 50px;
+            border-radius: 5px;
+        }
+        span button{
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .boxx{
+            width: 60%;
+            height: 300px;
+            margin: auto;
+           
+            margin-top: 50px;
+           display: flex;
+           flex-wrap: wrap;
+           
+        }
+        .box1{
+            height: 140px;
+            width: 150px;
+            border: 2px solid black;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <span><input type="text" id="colorInput" placeholder="enter your color name"> 
+            <input type="number" id="divNumberInput" placeholder="enter your div">
+        <button id="btn" onclick="changeBackgroundColor()">submit now</button></span>
+
+       <div class="boxx">
+        <div class="box1" id="output"></div>
+        <div class="box1" id="output"></div>
+        <div class="box1" id="output"></div>
+        <div class="box1" id="output"></div>
+        <div class="box1" id="output"></div>
+        <div class="box1" id="output"></div>
+        <div class="box1" id="output"></div>
+        <div class="box1" id="output"></div>
+       </div>
+    </div>
+   
+   <script>
+      function changeBackgroundColor() {
+        let color = document.getElementById("colorInput").value;
+        let divNumber = parseInt(document.getElementById("divNumberInput").value);
+
+        // Select the div based on divNumber (assuming divs are numbered starting from 1)
+        let div = document.querySelector(' .box').getElementsByTagName('div')[divNumber ];
+        
+        // Change the background color
+        div.style.backgroundColor = color;
+    }
+
+    </script>
+    
+</body>
+</html>

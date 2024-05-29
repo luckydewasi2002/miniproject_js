@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .box{
+        height: 100vh;
+        width: 200vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        
+       }
+       .box1{
+          min-height: 300px;
+        width: 400px;
+       
+        background-color: aliceblue;
+        border-radius: 10px;
+
+       }
+       .select{
+                  margin-left: 100px;
+                  height: 30px;
+                  width: 200px;
+                  margin-top: 40px;
+       }
+    #para{
+             text-align: center;
+             margin-top: 20px;
+    }
+    .color{
+        width: 100%;
+        height: 50px;
+       
+        margin-top: 20px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+
+    }
+    .cl1{
+        height: 40px;
+        width: 40px;
+       
+        border-radius: 20px;
+        margin-left: 10px;
+        cursor: pointer;
+        
+    }
+    #cl11{
+        background-color: red;
+    }
+    #cl12{
+        background-color: blue;
+    }
+    #cl13{
+        background-color: slateblue;
+    }
+    #cl14{
+        background-color: gold;
+    }
+    #up{
+        margin-top: 20px;
+        margin-left: 100px;
+        margin-bottom:30px ;
+        cursor: pointer;
+    }
+    #lo{
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <div class="box" id="boxx">
+        <div class="box1">
+         <select name="" id="sel" class="select">
+            <option value="">none</option>
+            <option value="django" >django</option>
+            <option value="react">react</option>
+            <option value="node">node</option>
+            <option value="python">python</option>
+         </select>
+          <div class="color">
+            <div class="cl1" id="cl11"></div>
+            <div class="cl1"  id="cl12"></div>
+            <div class="cl1"  id="cl13"></div>
+            <div class="cl1"  id="cl14"></div>
+          </div>
+         <p id="para"></p>
+
+         <button id="up">upperCase</button>
+         <button id="lo">lowerCase</button>
+
+         <script>
+
+            document.getElementById("sel").onclick = function(){
+                let a=  document.getElementById("sel").value 
+
+                if(a=="django"){
+                    document.getElementById("para").innerText ="Django is a high-level Python web framework that enables rapid development of secure and maintainable websites. Built by experienced developers, Django takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel"
+                }
+               else if(a=="react"){
+                    document.getElementById("para").innerText ="digitized, from booking cabs to ordering food to make bank transactions. Thanks to the efficient frameworks that provide a seamless user experience. One such robust frontend library is React. This tutorial on what is React will help you understand the library's fundamentals and work with a simple demo"
+
+
+                
+            }
+            else if(a=="node"){
+                    document.getElementById("para").innerText ="As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications. In the following  example, many connections can be handled concurrently. Upon each connection, the callback is fired, but if there is no work to be done, Node.js will sleep."
+
+                
+            }
+            else if(a=="python"){
+                    document.getElementById("para").innerText ="As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications. In the following  example, many connections can be handled concurrently. Upon each connection, the callback is fired, but if there is no work to be done, Node.js will sleep."
+
+                
+            }
+        }
+
+            document.getElementById("cl11").onclick = function(){
+                   document.getElementById("boxx").style.backgroundColor="red"
+            }
+            document.getElementById("cl12").onclick = function(){
+                   document.getElementById("boxx").style.backgroundColor="blue"
+            }
+            document.getElementById("cl13").onclick = function(){
+                   document.getElementById("boxx").style.backgroundColor="slateblue"
+            }
+            document.getElementById("cl14").onclick = function(){
+                   document.getElementById("boxx").style.backgroundColor="gold"
+            }
+            document.getElementById("up").onclick = function(){
+                   document.getElementById("para").style.textTransform="upperCase"
+            }
+            document.getElementById("lo").onclick = function(){
+                   document.getElementById("para").style.textTransform="lowerCase"
+            }
+
+         </script>
+        </div>
+    </div>
+</body>
+</html>

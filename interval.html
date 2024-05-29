@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="inp" type="text">
+    <button id="arraybtn">move to array</button>
+    <button id="print">print</button> <br>
+    <h3 id="h3"></h3>
+
+    <script>
+        let ary= [];
+        document.getElementById("arraybtn").onclick = function(){
+            let a = document.getElementById("inp").value;
+            document.getElementById("inp").value= ""
+            // console.log(a)
+            ary.push(a);
+        console.log(ary);
+       
+        }
+        document.getElementById("print").onclick =function(){
+         let i = 0;
+          let b=  setInterval(() => {
+           if(ary.length>i){
+           document.getElementById("h3").innerHTML += ary[i] + " ";
+
+           }
+           else{
+            clearInterval(b)
+           }
+            i++;
+          }, 1000);
+        }
+
+       
+        
+    </script>
+    
+</body>
+</html>

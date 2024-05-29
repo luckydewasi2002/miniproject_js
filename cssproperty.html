@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+        #firstTextarea{
+            width: 20%;
+            height: 18vh;
+            margin:2rem;
+        }
+
+        #secondTextarea{
+            width: 50%;
+            height: 15vh;
+            margin-left:2rem;
+        }
+        #colorInput{
+          margin-left: 2rem;
+        }
+        h1{
+            margin-left: 2rem;
+
+        }
+        p{
+            margin-left: 2rem;
+        }
+    </style>
+</head>
+<body>
+        <textarea id="firstTextarea" placeholder="Type here  "></textarea>
+        <h1>Css propeteis</h1>
+    <br>
+    <input type="text" id="colorInput" placeholder="Type color ">
+    <input type="text" id="bgColorInput" placeholder="Type background color ">
+    <input type="text" id="fontSizeInput" placeholder="Type font size ">
+    <br><br>
+
+    <textarea id="secondTextarea" disabled></textarea>
+    <p id="charCount">total latters: </p>
+
+<script>
+
+        document.getElementById('firstTextarea').addEventListener('input', function() {
+            document.getElementById('secondTextarea').value = this.value;
+            document.getElementById('charCount').innerText = 'Character count: ' + this.value.length;
+        });
+
+
+        document.getElementById('colorInput').addEventListener('input', function() {
+
+            document.getElementById('secondTextarea').style.color = this.value;
+        });
+            
+
+        document.getElementById('bgColorInput').addEventListener('input', function() {
+            document.getElementById('secondTextarea').style.backgroundColor = this.value;
+        });
+
+
+        document.getElementById('fontSizeInput').addEventListener('input', function() {
+
+            document.getElementById('secondTextarea').style.fontSize = this.value;
+        });
+    </script>
+
+</body>
+</html>
