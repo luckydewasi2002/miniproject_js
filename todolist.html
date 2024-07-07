@@ -1,0 +1,58 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #todoList {
+            list-style-type: none;
+            padding: 0;
+        }
+        #todoList li {
+            padding: 8px;
+            margin: 5px 0;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #todoList li button {
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <input type="text" id="todoInput" placeholder="Enter a new task">
+    <button id="addButton">Add</button>
+    <ul id="todoList"></ul>
+
+    <script>
+        document.querySelector('#addButton').addEventListener('click', function() {
+            const taskText = document.querySelector('#todoInput').value.trim();
+            if (taskText !== '') {
+                const li = document.createElement('li');
+                li.textContent = taskText;
+
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+                removeButton.addEventListener('click', function() {
+                    this.parentElement.remove();
+                });
+                li.appendChild(removeButton);
+                document.querySelector('#todoList').appendChild(li);
+
+                document.querySelector('#todoInput').value = '';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>minical</title>
+</head>
+<body>
+    <input type="text" id="n1" placeholder="enter num1"> <input  id="n2" type="text" placeholder="enter num1">
+  
+    <select name="" id="opr">
+    <option  value="">none</option>
+    <option  value="add">add</option>
+    <option  value="sub">sub</option>
+    <option  value="multi">multi</option>
+    <option  value="divide">divide</option>
+
+    <script>
+        function cal(){
+        let n1=parseInt( document.getElementById("n1").value);
+        let n2= parseInt(document.getElementById("n2").value);
+        let opr= (document.getElementById("opr").value);
+        if(opr=== "add"){
+         console.log(eval(n1+n2));
+        }
+    }
+    </script>
+  
+</body>
+</html>
+
+
+

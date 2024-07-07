@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+    <style>
+        .container{
+            
+           border: 1px solid greenyellow;
+           width: 300px;
+           padding: 20px;
+           background-color: #212121;
+           color: aliceblue;
+           border-radius: 10px ;
+          
+
+        }
+        body{
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            /* text-align: center; */
+            padding-top: 100px;
+            font-size: 16px;
+            
+        }
+        button{
+            border: none;
+            background-color: rgb(205, 36, 6);
+            color: rgb(14, 15, 15);
+            cursor: pointer;
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 5px;
+            margin-left: 10px;
+            font-weight: 600;
+        }
+        button:hover{
+            background-color: lightsalmon;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+     <span><label for="">Name :</label> 
+    <input type="text"> 
+     <button onclick="showDetails()">submit</button>
+</b></span><br>
+<div id="details">
+<p id="name">Name :    </p>
+<p id="schoolAddress">School Address :    </p>
+<p id="schoolName">School Name :    </p>
+<p id="subjectF">Subject :    </p>
+<p id="rollNo">Roll No :     </p>
+<p id="fees">Fees :  </p>
+</div>
+</div>
+
+<script>
+   
+   const students = [
+            { name: 'Mohit', rollNo: '001', subject: ['Math','science','English','Hindi'], schoolName: 'st.paol School', schoolAddress: 'Near by Gopalpura', fees: '10000' },
+            { name: 'Rohit', rollNo: '002', subject: ['Science','math','english','Hindi'], schoolName: 'st.paol School', schoolAddress: 'Near by Gopalpura', fees: '10000' },
+            { name: 'Aman', rollNo: '003', subject: ['Science','math','english','Hindi'], schoolName: 'st.paol School', schoolAddress: 'Near by Gopalpura', fees: '10000' },
+            { name: 'sabeel', rollNo: '004', subject: ['Science','math','english','Hindi'], schoolName: 'st.paol School', schoolAddress: 'Near by Gopalpura', fees: '10500' },
+            { name: 'Anil', rollNo: '005', subject: ['Science','math','english','Hindi'], schoolName: 'st.paol School', schoolAddress: 'Near by Gopalpura', fees: '10000' },
+            { name: 'Ibrahim', rollNo: '006', subject: ['Science','math','english','Hindi'], schoolName: 'st.paol School', schoolAddress: 'Near by Gopalpura', fees: '10000' },
+            { name: 'Laxman', rollNo: '007', subject: ['Science','math','english','Hindi'], schoolName: 'st.paol School', schoolAddress: 'Near by Gopalpura', fees: '10000' },
+            { name: 'Farheen', rollNo: '008', subject: ['Science','math','english','Hindi'], schoolName: 'st.paol School', schoolAddress: 'Near by Gopalpura', fees: '10000' },
+            { name: 'prajjal', rollNo: '009', subject: ['Science','math','english','Hindi'], schoolName: 'st.paol School', schoolAddress: 'Near by Gopalpura', fees: '10000' },
+            { name: 'Kajal', rollNo: '10', subject: ['Science','math','english','Hindi'], schoolName: 'st.paol School', schoolAddress: 'Near by Gopalpura', fees: '10000' },
+
+        ];
+
+        function showDetails() {
+            const studentName = document.getElementById('studentName').value.trim();
+            const detailsDiv = document.getElementById('details');
+
+            // Find student by name
+            const student = students.find(s => s.name.toLowerCase() === studentName.toLowerCase());
+
+            if (student) {
+                document.getElementById('name').textContent = 'Name: ' + student.name;
+                document.getElementById('rollNo').textContent = 'Roll No: ' + student.rollNo;
+                document.getElementById('subject').textContent = 'Subject: ' + student.subject;
+                document.getElementById('schoolName').textContent = 'School Name: ' + student.schoolName;
+                document.getElementById('schoolAddress').textContent = 'School Address: ' + student.schoolAddress;
+                document.getElementById('fees').textContent = 'Fees: ' + student.fees;
+            } else {
+                detailsDiv.innerHTML = '<p>Student not found.</p>';
+            }
+        }
+</script>
+</body>
+</html>
