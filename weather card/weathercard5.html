@@ -3,97 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>weather card 3</title>
+    <title>weather card 5</title>
     <style>
-        .container{
-            width: 130vh;
-           
-            margin: auto;
-            border: 1px solid black;
-            background-color: rgba(255, 255, 255, 0.7);
-            border-radius: 2rem;
-            margin-top: 3rem;
-        }
-        body{
-            background-color: antiquewhite;
-        }
-        .card1{
-            height: 180px;
-            width: 80%;
-            border: 1px solid grey;
-            margin-top: 40px;
-            margin-left: 100px;
-            border-radius: 1rem;
-            background-color: #D3D2D3;
-        }
-        .card2{
-            height: 180px;
-            width: 80%;
-            border: 1px solid grey;
-            margin-top: 40px;
-            margin-left: 100px;
-            border-radius: 1rem;
-            background-color: #D3D2D3;
-        }
-        .card3{
-            height: 180px;
-            width: 80%;
-            border: 1px solid grey;
-            margin-top: 40px;
-            margin-left: 100px;
-            border-radius: 1rem;
-            background-color: #D3D2D3;
-            margin-bottom: 40px;
-        }
-        h3{
-            margin-left: 20px;
-            font-family: sans-serif;
-            font-weight: 400;
-        }
-       
-        .main{
-            display: flex;
-           
-            border: 1px solid red;
-            /* padding: 20px; */
-            padding-top: 0px;
-        }
-        .deg{
-            
-            border: 1px solid greenyellow;
-            padding-top:0px;
-           font-size: 30px;
-        }
-        .des{
-            font-family: sans-serif;
-            color: white;
-            /* font-weight:bold; */
-            font-size: 10px;
-            padding-left: 20px;
-        }
+     *{
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+}
+.main-container{
+    /* border: 2px solid red; */
+    margin: 30px 0px;
+    width: 65%;
+    padding: 3rem 0rem;
+    background-color: #f0f8ff;
+    border-radius: 10px;
+
+}
+
+.weather-card {
+    background: linear-gradient(to right, #2e80f2, #87ceeb);
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 72%;
+    margin:40px auto;
+    position: relative;
+    overflow: hidden;
+    height: 150px;
+    /* margin: 40px; */
+}
+.weather-card1 {
+    background: linear-gradient(to right, #360ad4, #e8bcf7);
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 72%;
+    margin:40px auto;
+    position: relative;
+    overflow: hidden;
+    height: 150px;
+    /* margin: 40px; */
+}
+.weather-card2 {
+    background: linear-gradient(to right, rgb(52, 142, 90), rgb(114, 245, 171));
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 72%;
+    margin:40px auto;
+    position: relative;
+    overflow: hidden;
+    height: 150px;
+    /* margin: 40px; */
+}
+
+.weather-icon .sun {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+     background:linear-gradient(360deg,rgb(251, 239, 4),rgb(246, 245, 244));opacity: 0.;
+    border-radius: 50%;
+    font-size: 80px;
+    right: -50px;
+    top: -50px;
+}
+.weather-icon1 .sun {
+    position: absolute;
+     width: 200px;
+     height: 200px;
+     /* background:linear-gradient(360deg,rgb(251, 239, 4),rgb(246, 245, 244));opacity: 0.;  */
+    border-radius: 50%;
+   right: -30px;
+    top:-20px;
+
+}
+.weather-icon2 .sun {
+    position: absolute;
+     width: 150px;
+     height: 150px;
+    border-radius: 50%;
+   right: -10px;
+    top:-10px;
+
+}
+.weather-icon1 .sun img{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+.weather-icon2 .sun img{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.weather-info{
+    width: 60%;
+    /* border: 2px solid red; */
+    display: flex;
+    margin-bottom: 50px;
+    /* padding:20px ; */
+}
+
+.left{
+    /* border: 2px solid yellow; */
+    margin: 0;
+    padding: 0;
+}
+.left p{
+    /* max-height: 50px; */
+    font-size: 100px;
+    font-weight: 100;
+
+}
+hr{
+    height: 60px;
+    margin: 48px 10px;
+
+}
+
+.right{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+}
+.right p{
+    padding: 0;
+    margin: 0;
+    margin: 5px 10px;
+}
+.right p:nth-child(2){
+    text-align: left;
+}
+.right i{
+    margin-right: 5px;
+}
+.right1{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+}
+.right1 p{
+    padding: 0;
+    margin: 0;
+    margin: 5px 10px;
+}
+.right1 p:nth-child(2){
+    text-align: left;
+}   
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="card1">
-            <h3>Sunny</h3>
-            <div class="main">
-                <div class="deg">
-                    <h1>12°</h1>
-                </div>
-                <div class="des">
-                    <h2>Tuesday, 22 September </h2>
-                    <span><h2>Paris</h2></span>
-                </div>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Card</title>
+<link rel="stylesheet" href="weather-card-4.css">
+</head>
+<body>
+    <div class="main-container">
+    <div class="weather-card">
+        <div class="weather-icon">
+            <div class="sun"></div>
+        </div>
+    <div class="weather-info">
+<div class="left">
+    <span>Sunny</span>
+<p>25&#176;</p>
+</div>
+<hr>
+<div class="right">
+    <p>Monday, 21 September</p>
+    <p><i class="fa-solid fa-location-dot"></i> San Francisco</p>
+</div>
+    </div>
+        </div>
+            <div class="weather-card1">
+        <div class="weather-icon1">
+            <div class="sun"><img src="https://cdn.icon-icons.com/icons2/1370/PNG/512/if-weather-5-2682846_90760.png" alt=""></div>
+        </div>
+    <div class="weather-info">
+<div class="left">
+    <span>Cloudy Night</span>
+<p>22&#176;</p>
+</div>
+<hr>
+<div class="right1">
+    <p>Tuesday, 22 September</p>
+    <p><i class="fa-solid fa-location-dot"></i> Paris</p>
+</div>
+    </div>
+        </div>
+            <div class="weather-card2">
+        <div class="weather-icon2">
+            <div class="sun">
+                <img src="https://cdn3d.iconscout.com/3d/premium/thumb/thunderstorm-8841400-7151180.png?f=webp" alt="">
             </div>
         </div>
-        <div class="card2">
-            <h3>Cloudy Night</h3>
-        </div>
-        <div class="card3">
-            <h3>Rain</h3>
-            
+    <div class="weather-info">
+<div class="left">
+    <span>Rain</span>
+<p>15&#176;</p>
+</div>
+<hr>
+<div class="right">
+    <p>Sunday, 23 September</p>
+   <p> <i class="fa-solid fa-location-dot"></i>London </p></div>
+    </div>
         </div>
     </div>
+    </div>
+</body>
+</html>
 </body>
 </html>
