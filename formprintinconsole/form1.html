@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="user name"> name :</label>
+<input type="text" id="user name" placeholder="enter your name"> <br> <br>
+<label for="">email :</label>
+<input type="email" placeholder="enter your email"> <br> <br>
+<label for="">passwerd :</label>
+<input type="password" placeholder="enter your passwerd"> <br> <br>
+<label for=""> gender : </label>
+<input type="radio" name="gender">male
+<input type="radio" name="gender">female <br> <br>
+<label for=""> language :</label>
+<input type="checkbox"> hindi
+<input type="checkbox"> english <br> <br>
+   
+     <button>submit</button>
+     <script>
+     let input = document.querySelectorAll("input")
+     let btn = document.querySelector("button")
+
+     btn.addEventListener("click",()=>{
+        let value1= input[0].value
+        let value2 = input[1].value
+        let value3= input[2].value
+        let value4 = input[3].value
+        let value5= input[4].value
+        let value6 = input[5].value
+        let value7= input[6].value
+        
+        console.log(`{
+        name : ${value1}, email : ${value2}, password : ${value3}, gender male : ${value4},gender female : ${value5}, langauge hindi :${value6}, langauge english : ${value7} }`)
+         input[0].value =''
+          input[1].value =''
+           input[2].value =''
+            input[3].value =''
+             input[4].value =''
+              input[5].value =''
+               input[6].value =''
+    })
+    
+     </script>
+</body>
+</html>
